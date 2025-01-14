@@ -1,0 +1,23 @@
+https://devopscube.com/python-for-devops/
+
+1 COnfig mGMT
+With the help of python, one can automate varous processes during deployment, including pulling secret key from the server,reading records from a csv file and also on platforms like ansible, you can build a custom module for your use case if what you want does not exist already
+
+
+2 Devops Tooling
+Developers can build an in-house solution for their various tasks, you can use libraries like psutil 
+and os module to monitor logged in users in your ec2 instances,memory usage and others,
+such scripts can be pushed into central repositories and and be reused within the organization
+
+3 Cloud Automation
+YOu can use a library like boto3 sdk for python to automate varous cloud activities including interacting with various aws resources like aws dynamodb,cognito,iam etc
+
+4. CICD
+You can write a python script to automate the workflow of automated unit tests and linting ensuring the integrity of the codes being commited to your repository
+
+5. Infrastructure Provisioning
+
+
+With the help of CDK, you can provision a whole infrastructure task using IAC, you can setup a vpc, spinup ec2 instances, create instances of lambda functions among others
+
+
