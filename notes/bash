@@ -1,0 +1,153 @@
+### Bash Scripting Questions for Interview Preparation  
+
+#### **Beginner-Level Questions**  
+1. What is a Bash script, and how do you create one?  
+A bash script is a file containing instructions that informs the os what to do instead of it being done manually by the user.It serve as a bridge between a user and the os
+
+
+2. How do you make a Bash script executable?
+chmod +x the_file.sh
+
+
+3. Explain the purpose of the `#!/bin/bash` shebang line in a script.  
+this is the shebang !#/bin/bash telling the shell that it should be interpreted as a bash script, cus there are others like zsh
+
+4. What are some common file extensions used for Bash scripts?  
+.sh
+
+
+5. How do you run a Bash script?  
+./file_here.sh ,bash file_here.sh, sh file_here.sh
+
+
+#### **Variables and Data Types in Bash**  
+6. How do you declare a variable in a Bash script? Provide an example.  
+variable_here=variable_value
+
+7. What is the difference between environment variables and local variables in Bash?  
+environment variables are variables that are part of the os usually added using the 'export' command whiles local variables are variables that are usually found in a specific bash script.Env variables can be accessed by child processes while local variables can not unless exported
+
+
+8. How do you export a variable so it can be accessed by child processes?  
+export VARIABLE_NAME
+
+9. Explain the difference between single quotes `' '` and double quotes `" "` when working with strings in Bash.  
+
+
+10. How do you perform arithmetic operations in Bash?  
+you can do so using the basic arithmetic operations like +,-,/,*,**
+calculator=$((5+4))
+
+#### **Input and Output in Bash Scripts**  
+11. How can you accept user input in a Bash script? Provide an example.  
+my_var=""
+read my_var
+echo "you said $my_var";
+
+
+12. What is the purpose of the `read` command in Bash?  
+reading input from user
+
+13. How do you redirect the output of a command to a file in Bash?  
+using the redirect operator either > or >>
+ls > file_here.txt
+ls >> file_here.txt
+
+14. Explain the difference between `>` and `>>` when redirecting output in Bash.  
+the first rewdirect operator  moves output of the command to a new file but  overwirtes the file if it already exists while the second one appends the output to the file
+
+15. How do you read a file line by line in a Bash script?  
+
+16. Explain the difference between `<` and `<<` when ____ in Bash.  
+
+#### **Schedule Scripts Using Cron**  
+16. What is `cron`, and how is it used?  
+cron is  a time-based job scheduler for unix based systems
+
+
+17. How do you create a cron job to run a Bash script at a specific time?  
+open the crontab with crontab -e
+
+write ur command * * * * * python main.py
+ctr + x to exit from the file
+crontab -l to list the commands scheduled to run
+
+
+18. Explain the structure of a cron schedule (minute, hour, day, month, day of the week).  
+
+* -> minute to run (0 - 59)
+
+* -> hr to run(0 - 23)  
+* -> day of the month to run(1 - 31)
+* -> month to run(1 - 12)
+* -> day of the week to run(0 - 6)
+
+
+
+19. How do you list all scheduled cron jobs for the current user?  
+crontab -e
+
+20. What is the difference between system-wide and user-specific cron jobs?  
+idk
+
+sitewide is cronjobs that  runs on all user pcs managed by system admins found at /etc/crontab
+user-specifc only runs for only that specific user found using crontab -e
+
+21. How can you ensure a cron job runs even if the system restarts?  
+idk
+@reboot
+
+22. How do you debug issues with cron jobs that are not executing as expected?  
+grep CRON /var/log/syslog
+
+
+23. How would you schedule a script to run every day at 5:30 PM using cron?  
+ 30 17 * * * file_here
+
+24. What are the `crontab` commands to edit, list, or remove cron jobs?  
+crontab -e
+crontab -l  
+crontab -r 
+
+25. How do you log the output of a cron job?  
+
+
+
+#### **Scenario-Based Questions**  
+26. Write a Bash script that accepts a filename as input, checks if the file exists, and prints the number of lines in the file.  
+
+27. How would you schedule a script to back up a directory daily using `cron`?  
+
+
+28. Create a Bash script that prints "Hello, World!" if the user presses Enter within 5 seconds; otherwise, it prints "Timeout."  
+
+
+
+29. Explain how you would write a script to clean up temporary files older than 7 days and schedule it to run weekly.  
+
+
+30. Write a Bash script that takes two numbers as input and prints their sum, product, difference, and quotient.  
+
+
+1.What are four methods to secure resources inside a VPC?
+
+1. Ensure that your security groups are configured well and only appropriate ports and rpotocols are allowed
+
+
+2.Check NACL table to ensure that your vpc isnt allwoing traffic from unexpected sources and also its not blocking your network from 
+required resouces like the internet
+
+
+3. Use subnets appropriately, partition it in a manner that public ones are used for public interactions and private ones are used for securing things like your db and backend services
+
+4. use bastion host to protect your other instances from external communication. Ensuring that these instances can only be interactred with throuh the nbastion host
+
+
+2.What kind of inbound and outbound traffic does the default security group allow or deny? 
+By default, SG denys all inbound traffics and allows all outbound
+and you can explicity specify it to allow from a specific protocol on a specific port
+
+
+
+3.A network ACL is stateless. What does this mean?
+It means that unlike sg where if you allow inbound traffic on a specific sg, protocol or port, it auto allows iutbound on the same protocol and port, with ACL, you need to explicityl specify rules for both inbound and outbound

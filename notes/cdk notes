@@ -1,0 +1,5 @@
+npm install -g aws-cdk
+
+cdk init --language python --project-name my_cdk_project
+
+cdk bootstrap

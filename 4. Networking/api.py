@@ -31,3 +31,18 @@ try:
     post_request()
 except Exception as e:
     print
+
+
+
+
+try:
+    res=requests.get(url,)
+    re=res.json() if res.status_code==200 else "naa"
+    print(re)
+except Exception as e:
+    print(e)
+
+
+with open('data.json','r') as f:
+   for line in f.readlines():
+       print(line)

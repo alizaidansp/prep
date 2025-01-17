@@ -1,0 +1,60 @@
+Here are the Docker interview preparation questions you requested:
+
+---
+
+### **Beginner-Level Questions:**
+1. What is Docker, and how is it different from a virtual machine?
+2. What is a Docker image, and how does it differ from a Docker container?
+3. Explain the lifecycle of a Docker container.
+4. What is the purpose of the `Dockerfile`? List some commonly used instructions in a `Dockerfile`.
+5. How do you list all running and stopped containers?
+6. What is the command to build a Docker image from a `Dockerfile`? 
+7. How do you map ports between a Docker container and the host machine?
+8. What is the difference between `CMD` and `ENTRYPOINT` in a `Dockerfile`?
+9. What is the purpose of the `docker-compose` command? How does it differ from running individual `docker` commands?
+10. How can you persist data in a Docker container?
+
+---
+
+### **Intermediate-Level Questions:**
+1. What are Docker volumes, and how are they used?
+2. Explain the difference between `COPY` and `ADD` in a `Dockerfile`.
+3. What is the purpose of the `.dockerignore` file?
+4. How do you remove unused Docker images, containers, and volumes?
+5. Explain Docker networking. What are the different types of Docker networks?
+6. How can you run multiple containers together using Docker Compose?
+7. What is the difference between `docker run` and `docker start`?
+8. Explain how to pass environment variables to a container.
+9. What are multi-stage builds in Docker, and why are they useful?
+10. How do you inspect a running Docker container?
+
+---
+
+### **Advanced-Level Questions:**
+1. What is Docker Swarm, and how does it differ from Kubernetes?
+2. How do you scale a Docker service in a Swarm cluster?
+3. Explain how Docker handles security for containers.
+4. What are the common strategies for optimizing Docker images?
+5. How do you debug issues inside a running Docker container?
+6. What is the difference between bind mounts and volumes in Docker?
+7. Explain the role of namespaces and cgroups in Docker.
+8. How can you use Docker to create a CI/CD pipeline?
+9. How do you handle secrets and sensitive data in Docker containers?
+10. What is the difference between `docker-compose.yml` and `docker-compose.override.yml`?
+11.Optimizing docker containers
+12. Security best practices for docker containers
+---
+
+### **Scenario-Based Questions:**
+1. Your container is running but cannot connect to an external database. How would you troubleshoot?
+2. You want to reduce the size of your Docker image. What steps would you take?
+3. How would you deploy a multi-container application with networking and persistent data storage?
+4. You are asked to run a specific version of an application in a Docker container. How would you achieve this?
+5. A container crashes frequently due to insufficient memory. How would you resolve this?
+
+---
+
+
+
+
+
